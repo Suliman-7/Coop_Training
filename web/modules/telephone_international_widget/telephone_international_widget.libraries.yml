@@ -1,0 +1,14 @@
+intl-tel-input:
+  remote: https://intl-tel-input.com/
+  version: VERSION
+  license:
+    name: MIT
+    url: https://github.com/jackocnr/intl-tel-input/blob/master/LICENSE
+    gpl-compatible: true
+  js:
+    /libraries/intl-tel-input/build/js/intlTelInput.js: {}
+    js/telephone_international_widget.js: {}
+  css:
+    base:
+      /libraries/intl-tel-input/build/css/intlTelInput.css: {}
+      css/telephone_international_widget.css: {}

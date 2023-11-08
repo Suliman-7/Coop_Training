@@ -1,0 +1,47 @@
+global-styling:
+  css:
+    theme:
+      css/style.css: {}
+
+  js:
+    js/node.js: {}
+
+  dependencies:
+
+    -  core/jquery
+
+
+
+AR:
+
+  css:
+    theme:
+      css/bootstrap.rtl.css: {}
+
+  js:
+    js/node.js: {}
+
+  dependencies:
+
+    -  core/jquery
+
+
+
+EN:
+
+  css:
+    theme:
+      css/style.css: {}
+
+  js:
+    js/node.js: {}
+
+  dependencies:
+
+    -  core/jquery
+
+
+
+
+
+  

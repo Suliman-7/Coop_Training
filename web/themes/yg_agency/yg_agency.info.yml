@@ -1,0 +1,35 @@
+name: 'YG Agency'
+description: 'Drupal 8 theme perfect for portfolio and agency websites'
+# core: 8.x
+type: theme
+base theme: classy
+package: 'Bootstrap'
+screenshot: screenshot.png
+
+regions:
+  navigation: 'Navigation'
+  primary_menu: 'primary_menu'
+  header: 'Top Bar'
+  highlighted: 'Highlighted'
+  logo: 'logo'
+  content: 'Content'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
+  footer: 'footer'
+  footer_1: 'Privacy footer'
+
+libraries:
+  - yg_agency/global-styling
+  - yg_agency/bootstrap
+
+
+# Information added by Drupal.org packaging script on 2018-03-30
+# version: '8.x-1.0-alpha2'
+core_version_requirement: ^8 || ^9
+# project: 'yg_agency'
+# datestamp: 1522398787
+
+# Information added by Drupal.org packaging script on 2020-08-24
+version: '2.0.0'
+project: 'yg_agency'
+datestamp: 1598249476

@@ -1,0 +1,29 @@
+global-styling:
+  css:
+    theme:
+      css/agency.css: {}
+      css/animate.css: {}
+      fonts/font-awesome/css/font-awesome.css: {}
+      'https://fonts.googleapis.com/css?family=Montserrat:400,700': { type: external, minified: true }
+      'https://fonts.googleapis.com/css?family=Kaushan+Script': { type: external, minified: true }
+      'https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic': { type: external, minified: true }
+      'https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700': { type: external, minified: true }
+  js:
+    vendor/jquery-easing/jquery.easing.min.js: {}
+    js/jqBootstrapValidation.js: {}
+    js/agency.js: {}
+
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+
+bootstrap:
+  version: VERSION
+  css:
+    base:
+      bootstrap/css/bootstrap.min.css: { weight: 0 }
+  js:
+    vendor/popper/popper.js: {}
+    bootstrap/js/bootstrap.min.js: {}
+  dependencies:
+    - core/jquery

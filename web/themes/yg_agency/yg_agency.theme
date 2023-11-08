@@ -1,0 +1,47 @@
+<?php
+/**
+ * @file
+ * YG agency theme.
+ */
+
+function yg_agency_preprocess_page(&$variables) {
+  $variables['facebook'] = theme_get_setting('facebook');
+  $variables['twitter'] = theme_get_setting('twitter');
+  $variables['google_plus'] = theme_get_setting('google_plus');
+  $variables['linkedin'] = theme_get_setting('linkedin');
+
+}
+/**
+ * Implements hook_form_system_theme_settings_alter().
+ */
+function yg_agency_form_system_theme_settings_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+
+  $form['agency_settings']['footer'] = [
+    '#type' => 'details',
+    '#title' => t('Theme Settings'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  ];
+  $form['agency_settings']['footer']['facebook'] = [
+    '#type' => 'textfield',
+    '#title' => t('Facebook'),
+    '#default_value' => theme_get_setting('facebook'),
+  ];
+  $form['agency_settings']['footer']['twitter'] = [
+    '#type' => 'textfield',
+    '#title' => t('Twitter'),
+    '#default_value' => theme_get_setting('twitter'),
+  ];
+  $form['agency_settings']['footer']['google_plus'] = [
+    '#type' => 'textfield',
+    '#title' => t('Google plus'),
+    '#default_value' => theme_get_setting('google_plus'),
+  ];
+  $form['agency_settings']['footer']['linkedin'] = [
+    '#type' => 'textfield',
+    '#title' => t('Linkedin'),
+    '#default_value' => theme_get_setting('linkedin'),
+  ];
+}
+
+

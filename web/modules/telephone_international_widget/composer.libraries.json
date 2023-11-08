@@ -1,0 +1,36 @@
+{
+  "name": "drupal/telephone_international_widget",
+  "type": "drupal-module",
+  "description": "A field widget for entering, formatting, and validating international telephone numbers.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/telephone_international_widget",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/telephone_international_widget",
+    "source": "http://cgit.drupalcode.org/telephone_international_widget"
+  },
+  "repositories": {
+    "intl-tel-input": {
+      "type": "package",
+      "package": {
+        "name": "intl-tel-input/intl-tel-input",
+        "version": "16.0.0",
+        "type": "drupal-library",
+        "extra": {
+          "installer-name": "intl-tel-input"
+        },
+        "dist": {
+          "url": "https://github.com/jackocnr/intl-tel-input/archive/v16.0.0.zip",
+          "type": "zip"
+        },
+        "require": {
+          "composer/installers": "~1.0"
+        }
+      }
+    }
+  },
+  "require": {
+    "intl-tel-input/intl-tel-input": "16.0.0"
+  }
+}
