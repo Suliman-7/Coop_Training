@@ -1,0 +1,54 @@
+
+
+{%
+set node__classes = [
+
+    'node' ,
+    node.isPromoted() ? 'node-promoted',
+    node.isSticky() ? 'node-sticky',
+    not node.isPublished() ? 'node-unpublished',
+    view_mode ? 'node-view-mode-' ~ view_mode|clean_class,
+]
+%}
+
+
+<table>
+<match {{ attribute.addClass(node__classes)}}>
+
+{# {{ title_prefix }}
+ <h2 {{title_attributes.addClass('node-title')}}>
+  <div>{{"Title: "~node.label}}</div>
+ </h2> 
+{{ title_suffix }} #}
+
+<div>
+{{ node.field_next.value }}
+</div>
+
+
+
+<div>
+{{ content.field_logo_team   }}
+</div>
+
+
+<div>
+{{ node.field_club.value~"      "~node.field_team.value }}
+</div>
+
+<div>
+{{ node.field_stadium.entity.label }}
+</div>
+
+
+{# <div>
+{{ node.field_date }}
+</div> #}
+
+
+
+
+
+
+</match>
+</table>

@@ -1,1 +1,1 @@
-// alert("Warning, our website under maintaince");
+alert("Warning, our website under maintaince");
