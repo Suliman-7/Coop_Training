@@ -7,22 +7,32 @@ base theme : false
 
 libraries:
   - alula_theme/global-styling
+  - alula_theme/grobal-rtl
+  - alula_theme/global-ltr
 
 
-
-ckeditor_stylesheets:
+stylesheets:
   - assets/css/style.css
+  - assets/css/style-rtl.css
+
 
 
 regions:
   header: 'Header'
-  section: 'Section'
   footer: 'Footer'
+  content: 'Content'
+  content_top : 'Content Top'
+  content_history : 'Content History'
+  content_mid : 'Content Mid'
 
   
 
 libraries-override:
   alula_theme/global-styling: true
+  alula_theme/global-ltr: true
+  alula_theme/global-rtl: true
+
+
 
 
 

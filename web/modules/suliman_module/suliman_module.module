@@ -1,0 +1,91 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for suliman module.
+ */
+
+
+ function suliman_module_cron() {
+    
+    \Drupal::messenger()->addMessage(t("Hello world :) :)"  ));
+
+ }
+
+
+
+
+
+ 
+
+ use Drupal\Core\Entity\EntityInterface;
+
+
+ function suliman_module_node_insert(EntityInterface $entity) {
+   if ($entity->getType() == 'compl') {
+     $random_number = mt_rand(10000, 99999);
+ 
+     $entity->set('field_random_number', $random_number);
+ 
+     $entity->save();
+
+
+   }
+ }
+
+ function suliman_module_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+    if ($node = \Drupal::routeMatch()->getParameter('node')) {
+        if ($node->getType() == 'compl') {
+
+            \Drupal::messenger()->addStatus(t('يستغرق العمل على الشكوى 4 أيام عمل'));
+        }
+      }
+
+
+  }
+
+
+
+ function suliman_module_preprocess_page(&$variables) {
+
+
+    if (\Drupal::service('path.matcher')->isFrontPage()) {
+
+        $user = \Drupal::currentUser();
+
+
+          \Drupal::messenger()->addStatus(t( $user->getDisplayName() . " ، " . 'أهلا'));
+        
+      }
+  }
+
+
+
+
+  
+
+
+function suliman_module_entity_access($entity, $operation, $account) {
+
+    if ($entity->getEntityTypeId() == 'compl') {
+
+        if (!$account->hasRole('ROLE_NAME') && $operation == 'view') {
+        
+        return \Drupal\Core\Access\AccessResult::forbidden();
+      }
+    }
+  
+    return \Drupal\Core\Access\AccessResult::neutral();
+  }
+
+
+
+
+
+
+
+
+
+
+
+

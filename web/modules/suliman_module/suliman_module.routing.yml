@@ -1,0 +1,21 @@
+suliman_module.custom_form:
+  path: '/custom-form'
+  defaults:
+    _form: '\Drupal\suliman_module\Form\CustomForm'
+    _title: 'Form'
+  requirements:
+    _permission: 'access content'
+
+
+
+suliman_module.random_content:
+  path: '/random-content'
+  defaults:
+    _controller: '\Drupal\suliman_module\Controller\RandomContentController::displayRandomContent'
+    _title: 'Here Random Content from any content type, clear cashe and will changes'
+  requirements:
+    _permission: 'access content'
+
+
+
+

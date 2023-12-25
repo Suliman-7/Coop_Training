@@ -1,0 +1,172 @@
+{# 
+<!-- Start hero  section-->
+ <content_top class="hero mt-2 mb-4 wow animate__fadeIn" data-wow-duration="1s">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="swiper h-100 ">
+                        <div class="swiper h-100 hero-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="./single-node-6.html">
+                                        <img class="img-fluid h-100 obj-cover" src="assets/images/ALULA-FC-9-min.jpg" alt="">
+                                        <div class="title">
+                                            <h3 class="m-0"> النمور العربية تعسكر في سلوفينيا </h3>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <a href="./single-node-1.html">
+                                        <img class="img-fluid  h-100 obj-cover" src="assets/images/النمور العربية مقبلة على الحصاد.jpg" alt="">
+                                        <div class="title">
+                                            <h3 class="m-0"> النمور العربية مقبلة على الحصاد</h3>
+                                        </div>
+
+                                    </a>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <a href="./single-node-3.html">
+                                        <img class="img-fluid  h-100 obj-cover" src="assets/images/نادي العلا يجدد التعاقد مع المدرب جميل قاسم.jpg" alt="">
+                                        <div class="title">
+                                            <h3 class="m-0"> نادي العلا يجدد التعاقد مع المدرب جميل قاسم</h3>
+                                        </div>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="next-match h-100">
+                        <!-- Swiper -->
+                        <div class="swiper h-100  ">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="match text-center p-2 pb-5 p-lg-5">
+                                        <h6 class="mb-md-5 mb-3">
+                                            المباريات القادمة
+
+                                        </h6>
+                                        <div class="clubs mb-md-5 mb-3 max-225 m-auto d-flex align-items-center justify-content-between">
+                                            <div class="club ">
+                                                <div class="logo-club">
+                                                    <img src="assets/images/المزاحمية.png" alt="">
+                                                </div>
+                                                <p class="mb-0 mt-2"> المزاحمية </p>
+                                            </div>
+                                            <div class="club">
+                                                <div class="logo-club">
+                                                    <img src="assets/images/logo.svg" alt="">
+                                                </div>
+                                                <p class="mb-0 mt-2">العلا </p>
+                                            </div>
+                                        </div>
+                                        <p>
+                                            ملعب نادي المزاحمية
+                                        </p>
+                                        <time>3:10 م</time>
+                                        <div class="date d-flex align-items-center gap-2 justify-content-center">
+                                            <span class="day">الخميس</span>
+                                            <span class="s-date">
+                                                04/11/2023
+                                            </span>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="match text-center p-2  pb-5 p-lg-5">
+                                        <h6 class="mb-md-5 mb-3">
+                                            المباريات القادمة
+
+                                        </h6>
+                                        <div class="clubs mb-md-5 mb-3 max-225 m-auto d-flex align-items-center justify-content-between">
+                                            <div class="club ">
+                                                <div class="logo-club">
+                                                    <img src="assets/images/logo.svg" alt="">
+                                                </div>
+                                                <p class="mb-0  mt-2">العلا </p>
+                                            </div>
+                                            <div class="club">
+                                                <div class="logo-club">
+                                                    <img src="assets/images/رضوى.png" alt="">
+                                                </div>
+                                                <p class="mb-0  mt-2"> رضوى</p>
+                                            </div>
+                                        </div>
+                                        <p>
+                                            ملعب الأمير محمد بن عبد العزيز
+
+                                        </p>
+                                        <time>3:35 م</time>
+                                        <div class="date d-flex align-items-center gap-2 justify-content-center">
+                                            <span class="day">السبت</span>
+                                            <span class="s-date">
+                                                11/11/2023
+                                            </span>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="match text-center p-2  pb-5 p-lg-5">
+                                        <h6 class="mb-md-5 mb-3">
+                                            آخر المباريات
+
+                                        </h6>
+                                        <div class="clubs mb-md-5 mb-3 max-225 m-auto d-flex align-items-center justify-content-between">
+                                            <div class="club ">
+                                                <div class="logo-club">
+                                                    <img src="assets/images/logo.svg" alt="">
+                                                </div>
+                                                <p class="mb-0  mt-2">العلا </p>
+                                            </div>
+                                            <div class="club">
+                                                <div class="logo-club">
+                                                    <img src="assets/images/الوطني.png" alt="">
+                                                </div>
+                                                <p class="mb-0  mt-2"> الوطني </p>
+                                            </div>
+                                        </div>
+                                        <p>
+                                            ملعب الأمير محمد بن عبد العزيز
+                                        </p>
+                                        <time>3:35 م</time>
+                                        <div class="date d-flex align-items-center gap-2 justify-content-center">
+                                            <span class="day">السبت</span>
+                                            <span class="s-date">
+                                               18/11/2023
+
+                                            </span>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+                            <div class="swiper-controll ">
+
+                                <div class=" swiper-pagination "></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</content_top>
+{# {{ attach_library('alula_theme/global-styling') }} #}
+<!-- End herosection -->
+ #}
+
+

@@ -1,0 +1,8 @@
+# Schema for the configuration files of the suliman module.
+suliman_module.settings:
+  type: config_object
+  label: 'suliman settings'
+  mapping:
+    example:
+      type: string
+      label: 'Example'

@@ -1476,6 +1476,8 @@ header .players .overlay-text h4 {
   color: #AE9879;
   font-size: 1.1111rem;
 }
+
+
 @media (max-width: 767px) {
   .leaders p {
     font-size: 0.9rem;

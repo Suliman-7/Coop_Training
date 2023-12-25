@@ -1,0 +1,7 @@
+name: suliman
+type: module
+description: suliman_module_to_the_task
+package: Custom
+core_version_requirement: ^9 || ^10
+dependencies:
+  - yes

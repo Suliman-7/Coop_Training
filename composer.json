@@ -55,6 +55,7 @@
         "drush/drush": "^11.6",
         "npm-asset/intl-tel-input": "^17.0",
         "oomphinc/composer-installers-extender": "^2.0",
+        "symfony/asset": "^5.2",
         "twig/twig": "^2.0"
     },
     "conflict": {
