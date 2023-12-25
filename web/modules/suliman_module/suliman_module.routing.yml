@@ -7,7 +7,6 @@ suliman_module.custom_form:
     _permission: 'access content'
 
 
-
 suliman_module.random_content:
   path: '/random-content'
   defaults:
