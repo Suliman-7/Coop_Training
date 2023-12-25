@@ -1,0 +1,25 @@
+.alula {
+    .text {
+        background-color: $color-2;
+    }
+    h4 {
+        font-size: 1.3889rem;
+    }
+    li {
+        a {
+            @extend .p1;
+            @include transition (all, 0.4s);
+            &:hover {
+                color: $color-3
+            }
+        }
+        @media (max-width:991px) {
+            max-width: 50%;
+            flex: 0 0 50%;
+        }
+    }
+    .p1 {
+        color: white;
+        font-size: 0.8889rem;
+    }
+}

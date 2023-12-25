@@ -1,0 +1,56 @@
+global-styling:
+  css:
+    theme:
+      assets/css/style.css: {}
+      assets/css/style.min.css: {}
+      assets/css/all.min.css: {}
+      assets/css/style.css.map: {}
+
+
+  js:
+      assets/js/script.js: {}
+      assets/js/csi.min.js: {}
+      assets/js/wow.min.js: {}
+
+
+
+
+    
+
+
+  dependencies:
+
+    -  core/jquery
+
+
+
+global-rtl:
+  css:
+    theme:
+      assets/css/style-rtl.css: {}
+
+  js:
+      assets/js/script.js: {}
+
+  dependencies:
+
+    -  core/jquery
+
+
+global-ltr:
+  css:
+    theme:
+      assets/css/style.css: {}
+
+  js:
+    js/node.js: {}
+
+  dependencies:
+
+    -  core/jquery
+
+
+
+
+
+  

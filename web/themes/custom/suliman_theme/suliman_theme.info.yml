@@ -8,29 +8,34 @@ base theme : bootstrap5
 
 libraries:
   - suliman_theme/global-styling
-  - suliman_theme/AR
-  - suliman_theme/EN
+
 
 
 ckeditor_stylesheets:
   - css/style.css
   - css/bootstrap.rtl.css
-  
+
 ckeditor5-stylesheets:
   - css/ck5style.css
 
 regions:
-  header:   Header
-  nav_branding: 'Navigation branding region'
-  nav_main: 'Main navigation region'
-  nav_additional: 'Additional navigation region (eg search form, social icons, etc)'
-  breadcrumb: Breadcrumbs
-  content: 'Main content'
-  sidebar_first: 'Sidebar first'
-  sidebar_second: 'Sidebar second'
-  footer: Footer
+  header: 'Header'
+  sidebar: 'Sidebar'
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  sidebar_first: 'Left sidebar'
+  sidebar_second: 'Right sidebar'
+  footer: 'Footer'
+  breadcrumb: 'Breadcrumb'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  
 
 libraries-override:
   suliman_theme/global-styling: true
+
 
 

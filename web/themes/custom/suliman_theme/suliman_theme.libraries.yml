@@ -3,8 +3,6 @@ global-styling:
     theme:
       css/style.css: {}
 
-  js:
-    js/node.js: {}
 
   dependencies:
 
@@ -12,8 +10,7 @@ global-styling:
 
 
 
-AR:
-
+global-rtl:
   css:
     theme:
       css/bootstrap.rtl.css: {}
@@ -26,9 +23,7 @@ AR:
     -  core/jquery
 
 
-
-EN:
-
+global-ltr:
   css:
     theme:
       css/style.css: {}

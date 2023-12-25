@@ -1,0 +1,37 @@
+.shop {
+    background-color: #F8F8F8;
+    .card-img-2 {
+        opacity: 0;
+        height: 0;
+        position: absolute;
+        @include transition(all, 0.5s);
+    }
+    .card:hover .card-img-2 {
+        opacity: 1;
+        height: auto;
+        position: unset;
+    }
+    .card:hover .card-img-1 {
+        opacity: 0;
+        height: 0;
+        position: absolute;
+    }
+    .price {
+        color: $color-2;
+        font-weight: 600;
+    }
+    p {
+        color: $color-1;
+    }
+    .card {
+        .btn-outline-secondary {
+            font-size: 0.8889rem;
+        }
+    }
+    .card-title {
+        min-height: 50px;
+    }
+    .card-images {
+        background: #F1F1F1;
+    }
+}

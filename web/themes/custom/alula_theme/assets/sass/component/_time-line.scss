@@ -1,0 +1,93 @@
+ .timeline {
+     .swiper-slide.active,
+     .swiper-slide:hover {
+         color: $color-4;
+         &::after {
+             border: 1px solid $color-4;
+         }
+         &::before {
+             background: $color-4;
+         }
+     }
+     .swiper-button-next,
+     .swiper-button-prev {
+         align-items: baseline;
+         padding-top: 35px;
+         display: none;
+         @media (max-width: 767px) {
+             display: flex;
+         }
+     }
+     .swiper-button-next:after,
+     .swiper-button-prev:after {
+         font-family: "Font Awesome 5 Pro";
+         font-weight: 300;
+         color: $color-2;
+         font-size: 24px;
+         padding-top: 40px;
+     }
+     .swiper-button-next:after {
+         content: "\f061";
+     }
+     .swiper-button-prev:after {
+         content: "\f060";
+     }
+     .swiper-slide {
+         cursor: pointer;
+         text-align: center;
+         color: $color-5;
+         font-size: 1.1111rem;
+         padding-bottom: 50px;
+         &::after {
+             content: "";
+             height: 40px;
+             width: 1px;
+             border: 1px solid $color-5;
+             position: absolute;
+             left: 0;
+             right: 0;
+             margin: auto;
+             bottom: 0;
+         }
+         &::before {
+             content: "";
+             height: 17px;
+             width: 17px;
+             background: $color-5;
+             border-radius: 50%;
+             position: absolute;
+             left: 0;
+             right: 0;
+             margin: auto;
+             bottom: 32px;
+             -webkit-border-radius: 50%;
+             -moz-border-radius: 50%;
+             -ms-border-radius: 50%;
+             -o-border-radius: 50%;
+         }
+     }
+     .swiper {
+         border-bottom: 1px solid $color-5;
+     }
+     .timeline-content {
+         h2 {
+             font-size: 1.6667rem;
+             color: $color-1;
+         }
+         p {
+             color: #818181;
+         }
+         .content {
+             opacity: 0;
+             height: 0;
+             @include transition (all, 0.5s);
+         }
+         .content:not(.show) * {
+             display: none;
+         }
+         .content.show {
+             opacity: 1;
+             height: auto;
+         }
+     }
+ }

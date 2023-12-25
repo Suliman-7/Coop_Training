@@ -46,11 +46,35 @@
     <js-placeholder token="{{ placeholder_token }}">
   </head>
   <body{{ attributes.addClass(body_classes) }}>
-    {#
-      Keyboard navigation/accessibility link to main content section in
-      page.html.twig.
-    #}
-    <div class="visually-hidden-focusable skip-link p-3 container">
+
+{# {% if language == ar %}
+    {{ "AR" }}
+    {% set direction = 'rtl' %}
+    {{ attach_library('suliman_theme/AR') }}
+    <link rel="stylesheet" href="custom/suliman_theme/css/bootstrap.rtl.css">
+{% else %}
+    {{ "EN" }}
+    {% set direction = 'ltr' %}
+    <link rel="stylesheet" href="custom/suliman_theme/css/style.css">
+    {{ attach_library('suliman_theme/EN')}}
+{% endif %} #}
+
+{% if html_attributes['dir'] == 'ltr' %}
+  {{ attach_library('suliman_theme/global-ltr') }}
+{% elseif html_attributes['dir'] == 'rtl' %}
+  {{ attach_library('suliman_theme/global-rtl') }}
+{%- endif -%}
+
+
+<div>
+{{ page.content }}
+</div>
+
+
+
+    <div class="C"> {{ "HEADER" }} </div> 
+    <div class="header">
+      {{ page.header }}
       <a href="#main-content" class="p-2">
         {{ 'Skip to main content'|t }}
       </a>

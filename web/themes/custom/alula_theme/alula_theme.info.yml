@@ -1,0 +1,28 @@
+name: alula_theme
+type: theme
+description: 'alula'
+core_version_requirement: '^9.4 || ^10'
+base theme : false
+
+
+libraries:
+  - alula_theme/global-styling
+
+
+
+ckeditor_stylesheets:
+  - assets/css/style.css
+
+
+regions:
+  header: 'Header'
+  section: 'Section'
+  footer: 'Footer'
+
+  
+
+libraries-override:
+  alula_theme/global-styling: true
+
+
+

@@ -1,0 +1,62 @@
+
+
+{%
+set node__classes = [
+
+    'node' ,
+    node.isPromoted() ? 'node-promoted',
+    node.isSticky() ? 'node-sticky',
+    not node.isPublished() ? 'node-unpublished',
+    view_mode ? 'node-view-mode-' ~ view_mode|clean_class,
+]
+%}
+
+
+<table>
+<diffrent_games {{ attribute.addClass(node__classes)}}>
+
+{# {{ title_prefix }}
+ <h2 {{title_attributes.addClass('node-title')}}>
+  <div>{{"Title: "~node.label}}</div>
+ </h2> 
+{{ title_suffix }} #}
+
+<tr>
+<div>
+{{ node.field_game.value }}
+</div>
+</tr>
+
+
+
+{% set image_styled = {
+  '#theme': 'image_style',
+  '#style_name': 'thumbnail',
+  '#uri': node.field_game_image[0].entity.uri.value,
+  '#alt': node.field_game_image[0].alt,
+} %}
+
+{% set image_logo = {
+  '#theme': 'image_style',
+  '#style_name': 'thumbnail',
+  '#uri': node.field_game_image[1].entity.uri.value,
+  '#alt': node.field_game_image[1].alt,
+} %}
+
+{{ image_styled }}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</diffrent_games>
+</table>

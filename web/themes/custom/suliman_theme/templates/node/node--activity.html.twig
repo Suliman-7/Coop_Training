@@ -1,0 +1,158 @@
+
+{%
+set node__classes = [
+
+    'node' ,
+    node.isPromoted() ? 'node-promoted',
+    node.isSticky() ? 'node-sticky',
+    not node.isPublished() ? 'node-unpublished',
+    view_mode ? 'node-view-mode-' ~ view_mode|clean_class,
+]
+%}
+
+<table>
+<activity {{ attribute.addClass(node__classes)}}>
+
+<tr>
+<td>{{ title_prefix }}
+ <h2 {{title_attributes.addClass('node-title')}}>
+  <div>{{"Title: "~node.label}}</div>
+ </h2> 
+{{ title_suffix }}
+</td>
+</tr>
+{# {{ a_classification_prefix }}
+ <h2 {{a_classification_attributes.addClass('node-field-a-classification')}}>
+  <a href="{{url}}" rel="bookmark">{{ field_a_classification }}</a>
+ </h2> 
+{{ a_classification_suffix }} #}
+
+
+
+<tr>
+<td>
+<div>
+
+{% if node.field_activity_date.start_date | date('y') > now|date("y") %} 
+<div>{{ "Status: " }}</div>
+<div class="S">{{ "Soon.." }}</div>
+{% elseif node.field_activity_date.end_date | date('y') < now|date("y") %}
+<div>{{ "Status: " }}</div>
+<div class="N">{{ "Not Available" }}</div>
+{% elseif node.field_activity_date.start_date | date('y') <= now|date("y") and node.field_activity_date.end_date | date('y') > now|date("y") %}
+
+
+    {% if node.field_activity_date.start_date | date('y') <= now|date("y") and node.field_activity_date.end_date | date('y') > now|date("y") %}
+    <div>{{ "Status: " }}</div>
+    <div class="A">{{ "Available" }}</div>
+    {% elseif node.field_activity_date.start_date | date('y') <= now|date("y") and node.field_activity_date.end_date | date('y') == now|date("y") %}
+
+
+        {% if node.field_activity_date.start_date | date('m') > now|date("m") and node.field_activity_date.start_date | date('y') >= now|date("y") %}
+        <div>{{ "Status: " }}</div>       
+        <div class="S">{{ "Soon.." }}</div>
+        {% elseif node.field_activity_date.end_date | date('m') < now|date("m") and node.field_activity_date.end_date | date('y') == now|date("y") %}
+        <div>{{ "Status: " }}</div>
+        <div class="N">{{ "Not Available1" }}</div>
+        {% elseif node.field_activity_date.start_date | date('m') > now|date("m") and node.field_activity_date.start_date | date('y') < now|date("y") %}
+        
+            {% if node.field_activity_date.end_date | date('m') > now|date("m") and node.field_activity_date.start_date | date('y') <= now|date("y") %}
+            <div>{{ "Status: " }}</div>
+            <div class="A">{{ "Available" }}</div>
+            {% elseif node.field_activity_date.end_date | date('m') < now|date("m") %}
+            <div>{{ "Status: " }}</div>
+            <div class="N">{{ "Not Available" }}</div>
+            {% elseif node.field_activity_date.end_date | date('m') == now|date("m") %}
+                
+                {% if node.field_activity_date.start_date | date('d') > now|date("d") %}
+                <div>{{ "Status: " }}</div>
+                <div class="S">{{ "Soon.." }}</div>
+                {% elseif node.field_activity_date.end_date | date('d') >= now|date("d") %}
+                <div>{{ "Status: " }}</div>
+                <div class="A">{{ "Available" }}</div>
+                {% elseif node.field_activity_date.end_date | date('d') < now|date("d") %}
+                <div>{{ "Status: " }}</div>
+                <div class="N">{{ "Not Available" }}</div>
+                {% endif %}
+            {% endif %}
+
+
+        {% endif %}
+
+
+
+    {% endif %} 
+
+{% elseif node.field_activity_date.start_date | date('y') == now|date("y") and node.field_activity_date.end_date | date('y') == now|date("y") %}
+
+    {% if node.field_activity_date.start_date | date('m') > now|date("m") %}
+    <div>{{ "Status: " }}</div>
+    <div class="S">{{ "Soon.." }}</div>
+    {% elseif node.field_activity_date.end_date | date('m') < now|date("m") %}
+    <div>{{ "Status: " }}</div>
+    <div class="N">{{ "Not Available" }}</div>
+
+
+    {% elseif node.field_activity_date.start_date | date('m') <= now|date("m") and node.field_activity_date.end_date | date('m') > now|date("m") %}
+    <div>{{ "Status: " }}</div>
+    <div class="A">{{ "Available" }}</div>
+    {% elseif node.field_activity_date.start_date | date('m') <= now|date("m") and node.field_activity_date.end_date | date('m') == now|date("m") %}
+    
+        {% if node.field_activity_date.start_date | date('d') > now|date("d") %}
+        <div>{{ "Status: " }}</div>
+        <div class="S">{{ "Status: Soon.." }}</div>
+        {% elseif node.field_activity_date.end_date | date('d') >= now|date("d") %}
+        <div>{{ "Status: " }}</div>
+        <div class="A">{{ "Status: Available" }}</div>
+        {% elseif node.field_activity_date.end_date | date('d') < now|date("d") %}
+        <div>{{ "Status: " }}
+        <div class="N">{{ "Not Available" }}</div></div>
+
+        
+        {% endif %}
+
+    {% endif %}
+
+
+
+
+{% endif %}
+
+</td>
+</tr>
+
+
+
+
+
+<tr>
+<td>
+
+
+<div>
+{{ "Classification: "~node.field_a_classification.entity.label }}
+</div>
+
+</td>
+</tr>
+
+
+
+<tr>
+<td>
+
+<div>
+{{ "Tags: "~node.field_activity_tag.entity.label }}
+</div>
+
+<div>
+{{ "Tags: "~node.field_activity_date.start_date }}
+</div>
+
+</td>
+</tr>
+
+
+</activity>
+</table>
+
