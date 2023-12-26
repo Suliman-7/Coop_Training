@@ -1,3 +1,0 @@
-field.widget.settings.telephone_international:
-  type: field.widget.settings.telephone_default
-  label: 'International telephone format settings'
